@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-// import { object, string, number, date, InferType } from 'yup';
 import * as Yup from 'yup';
 import css from './ContactForm.module.css';
-// const schema = object().shape({
-//   name: string().required(),
-//   number: string().min(10).max(13).required(),
-// });
+
 const FormSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
   number: Yup.string()
